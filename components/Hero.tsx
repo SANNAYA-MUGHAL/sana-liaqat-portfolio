@@ -18,12 +18,8 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResumeModal }) => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Status Badge */}
-        <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-[#EEEBFF] border border-[#D4CCFC] text-[#6C5CE7] text-xs font-mono font-medium mb-8 shadow-sm backdrop-blur-sm">
-          <span className="relative flex h-2 w-2">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
-          </span>
-          <span>Product Manager • Open to Global Remote Opportunities</span>
+        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EEEBFF] border border-[#D4CCFC] text-[#6C5CE7] text-xs font-mono font-medium mb-8 shadow-sm backdrop-blur-sm">
+          <span>🟢 Product Manager • Open to Global Remote &amp; Relocation Opportunities</span>
         </div>
 
         {/* Main Headline */}

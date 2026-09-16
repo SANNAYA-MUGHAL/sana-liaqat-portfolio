@@ -17,7 +17,7 @@ The portfolio demonstrates evidence-driven product thinking:
 ## Key Highlights & Product Deliverables
 
 1. **Hero & Dynamic Product Pipeline**:
-   - Status badge: *Product Manager • Open to Global Remote Opportunities*
+   - Status badge: *🟢 Product Manager • Open to Global Remote & Relocation Opportunities*
    - Interactive 6-stage product delivery pipeline: `CUSTOMER → PRODUCT → DATA → DECISION → DELIVERY → IMPACT`
    - 4 impact metric cards: 7+ Years Experience, 50+ Product Initiatives, 33% Cancellation Reduction, E2E Discovery-to-Impact.
 
