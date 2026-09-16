@@ -3,8 +3,8 @@
 import React, { useState } from 'react';
 import { Navbar } from '@/components/Navbar';
 import { Hero } from '@/components/Hero';
-import { AboutPhilosophy } from '@/components/AboutPhilosophy';
 import { ImpactScorecard } from '@/components/ImpactScorecard';
+import { AboutPhilosophy } from '@/components/AboutPhilosophy';
 import { FlagshipCaseStudy } from '@/components/FlagshipCaseStudy';
 import { SelectedWork } from '@/components/SelectedWork';
 import { ProductEcosystem } from '@/components/ProductEcosystem';
@@ -13,6 +13,10 @@ import { CapabilitiesSection } from '@/components/CapabilitiesSection';
 import { CareerJourney } from '@/components/CareerJourney';
 import { ExperienceSection } from '@/components/ExperienceSection';
 import { Toolbox } from '@/components/Toolbox';
+import { CertificationsSection } from '@/components/CertificationsSection';
+import { AwardsSection } from '@/components/AwardsSection';
+import { LanguagesSection } from '@/components/LanguagesSection';
+import { BeyondProductSection } from '@/components/BeyondProductSection';
 import { ResumeSection } from '@/components/ResumeSection';
 import { ContactSection } from '@/components/ContactSection';
 import { Footer } from '@/components/Footer';
@@ -35,43 +39,51 @@ export default function Home() {
       <Navbar onOpenResumeModal={() => handleOpenResume('pm')} />
 
       <main className="flex-grow">
-        {/* Section 3: Hero */}
+        {/* 1. Hero */}
         <Hero onOpenResumeModal={() => handleOpenResume('pm')} />
 
-        {/* Section 4: About / Product Philosophy */}
-        <AboutPhilosophy />
-
-        {/* Section 5: Impact Scorecard */}
+        {/* 2. Product Impact */}
         <ImpactScorecard />
 
-        {/* Section 6: Flagship Case Study */}
+        {/* 3. About / Product Philosophy */}
+        <AboutPhilosophy />
+
+        {/* 4. Flagship Case Study */}
         <FlagshipCaseStudy onOpenModal={(id) => setSelectedCaseStudyId(id)} />
 
-        {/* Section 7: Selected Product Work */}
+        {/* 5. Selected Product Work */}
         <SelectedWork onOpenModal={(id) => setSelectedCaseStudyId(id)} />
 
-        {/* Section 8: Product Ecosystem (Commerce Lifecycle) */}
+        {/* 6. Product Ecosystem / Systems Thinking */}
         <ProductEcosystem onOpenModal={(id) => setSelectedCaseStudyId(id)} />
-
-        {/* Section 9: FinTech / Bayuti Ecosystem */}
         <FinTechEcosystem />
 
-        {/* Section 10: Product Capabilities */}
+        {/* 7. Product Capabilities */}
         <CapabilitiesSection />
 
-        {/* Section 11: Career Journey */}
+        {/* 8. Professional Experience */}
         <CareerJourney />
-
-        {/* Section 12: Professional Experience */}
         <ExperienceSection />
 
-        {/* Section 13: Toolbox */}
+        {/* 9. Product Toolbox / Skills */}
         <Toolbox />
 
-        {/* Section 14: Resume Download & Preview */}
+        {/* 10. Certifications & Continuous Learning */}
+        <CertificationsSection />
+
+        {/* 11. Awards & Recognition */}
+        <AwardsSection />
+
+        {/* 12. Languages */}
+        <LanguagesSection />
+
+        {/* 13. Beyond Product */}
+        <BeyondProductSection />
+
+        {/* 14. Resume */}
         <ResumeSection />
 
-        {/* Section 15: Contact */}
+        {/* 15. Contact */}
         <ContactSection onOpenResumeModal={() => handleOpenResume('pm')} />
       </main>
 

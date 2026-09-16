@@ -19,14 +19,13 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResumeModal }) => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Concise navigation items as requested
   const navLinks = [
     { label: 'Home', href: '#' },
-    { label: 'Impact', href: '#impact' },
-    { label: 'Case Studies', href: '#case-studies' },
+    { label: 'Work', href: '#case-studies' },
     { label: 'Capabilities', href: '#capabilities' },
     { label: 'Experience', href: '#experience' },
-    { label: 'Skills', href: '#skills' },
-    { label: 'Resume', href: '#resume' },
+    { label: 'About', href: '#about' },
     { label: 'Contact', href: '#contact' },
   ];
 
@@ -64,7 +63,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResumeModal }) => {
               <a
                 key={link.label}
                 href={link.href}
-                className="text-xs xl:text-sm font-semibold text-[#5F687A] hover:text-[#6C5CE7] px-3 py-1.5 rounded-md hover:bg-[#EEEBFF] transition-colors"
+                className="text-xs xl:text-sm font-semibold text-[#5F687A] hover:text-[#6C5CE7] px-3.5 py-1.5 rounded-md hover:bg-[#EEEBFF] transition-colors"
               >
                 {link.label}
               </a>

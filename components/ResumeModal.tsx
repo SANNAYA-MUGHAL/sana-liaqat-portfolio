@@ -3,6 +3,7 @@
 import React, { useEffect } from 'react';
 import { X, Printer, FileText, Mail, Linkedin, MapPin, Clock } from 'lucide-react';
 import { EXPERIENCE_ROLES, EXPANDED_TOOLBOX } from '@/data/experience';
+import { CERTIFICATIONS, AWARDS, LANGUAGES } from '@/data/profileAdditions';
 
 interface ResumeModalProps {
   isOpen: boolean;
@@ -184,6 +185,69 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({
                   </span>
                 </div>
               ))}
+            </div>
+          </div>
+
+          {/* Certifications & Continuous Learning */}
+          <div className="space-y-3 border-t border-[#E1E5EE] print:border-gray-300 pt-6">
+            <h2 className="text-xs font-mono font-bold text-[#6C5CE7] print:text-black uppercase tracking-wider">
+              Certifications &amp; Continuous Learning
+            </h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+              {CERTIFICATIONS.map((cert) => (
+                <div key={cert.id} className="p-2.5 rounded-lg bg-[#F7F8FC] print:bg-transparent border border-[#E1E5EE] print:border-gray-300">
+                  <div className="flex items-baseline justify-between gap-2">
+                    <span className="font-semibold text-[#172033] print:text-black leading-snug">{cert.title}</span>
+                    <span className="text-[10px] font-mono shrink-0 px-1.5 py-0.5 rounded bg-white print:bg-transparent border border-[#E1E5EE] text-[#5F687A]">
+                      {cert.dateBadge || cert.status}
+                    </span>
+                  </div>
+                  <div className="text-[11px] text-[#6C5CE7] print:text-gray-700 mt-0.5">{cert.issuer}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Awards & Recognition & Languages */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 border-t border-[#E1E5EE] print:border-gray-300 pt-6">
+            {/* Awards */}
+            <div className="space-y-3">
+              <h2 className="text-xs font-mono font-bold text-[#6C5CE7] print:text-black uppercase tracking-wider">
+                Awards &amp; Recognition
+              </h2>
+              <div className="space-y-2 text-xs">
+                {AWARDS.map((award) => (
+                  <div key={award.id} className="p-2 rounded-lg bg-[#F7F8FC] print:bg-transparent border border-[#E1E5EE] print:border-gray-300">
+                    <div className="font-semibold text-[#172033] print:text-black">{award.title}</div>
+                    <div className="text-[11px] text-[#5F687A] flex justify-between items-center mt-0.5 font-mono">
+                      <span>{award.organization}</span>
+                      <span>{award.date}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Languages */}
+            <div className="space-y-3">
+              <h2 className="text-xs font-mono font-bold text-[#6C5CE7] print:text-black uppercase tracking-wider">
+                Languages
+              </h2>
+              <div className="space-y-2 text-xs">
+                {LANGUAGES.map((lang) => (
+                  <div key={lang.language} className="p-2.5 rounded-lg bg-[#F7F8FC] print:bg-transparent border border-[#E1E5EE] print:border-gray-300 flex items-center justify-between">
+                    <div>
+                      <span className="font-semibold text-[#172033] print:text-black">{lang.language}</span>
+                      {lang.credential && (
+                        <div className="text-[10px] text-[#5F687A] font-mono">{lang.credential}</div>
+                      )}
+                    </div>
+                    <span className="text-[11px] font-mono px-2 py-0.5 rounded bg-white print:bg-transparent border border-[#E1E5EE] text-[#6C5CE7] font-semibold">
+                      {lang.proficiency} {lang.statusBadge ? `• ${lang.statusBadge}` : ''}
+                    </span>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
 
